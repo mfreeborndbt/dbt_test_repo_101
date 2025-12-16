@@ -1,0 +1,79 @@
+models:
+- name: customer_orders
+  description: This model consolidates order details with enriched customer information,
+    providing a comprehensive view of customer orders. It includes order-specific
+    data such as order status, total price, and shipping details, as well as customer-specific
+    data like customer name, address, and market segment. This model is useful for
+    analyzing customer purchasing behavior and order fulfillment efficiency.
+  columns:
+  - name: order_id
+    description: A unique identifier for each order.
+  - name: customer_id
+    description: A unique identifier for each customer associated with the order.
+  - name: order_status
+    description: The current status of the order, indicating its progress in the fulfillment
+      process.
+  - name: total_price
+    description: The total monetary value of the order.
+  - name: order_date
+    description: The date when the order was placed.
+  - name: order_priority
+    description: The priority level assigned to the order, affecting its processing
+      speed.
+  - name: clerk
+    description: The name or identifier of the clerk responsible for handling the
+      order.
+  - name: ship_priority
+    description: The priority level for shipping the order, influencing delivery speed.
+  - name: order_comment
+    description: Additional comments or notes related to the order.
+  - name: line_number
+    description: A unique identifier for each line item within an order.
+  - name: part_id
+    description: A unique identifier for each part included in the order.
+  - name: supplier_id
+    description: A unique identifier for the supplier providing the parts for the
+      order.
+  - name: quantity
+    description: The number of units of each part ordered.
+  - name: extended_price
+    description: The total price for each line item, calculated as quantity times
+      unit price.
+  - name: discount
+    description: The discount applied to each line item, if any.
+  - name: tax
+    description: The tax amount applied to each line item.
+  - name: return_flag
+    description: Indicates whether the line item has been returned.
+  - name: line_status
+    description: The current status of the line item within the order.
+  - name: ship_date
+    description: The date when the order is scheduled to be shipped.
+  - name: commit_date
+    description: The date by which the order is committed to be fulfilled.
+  - name: receipt_date
+    description: The date when the order is expected to be received by the customer.
+  - name: ship_instructions
+    description: Special instructions for shipping the order.
+  - name: ship_mode
+    description: The mode of transportation used for shipping the order.
+  - name: line_comment
+    description: Additional comments or notes related to the line item.
+  - name: customer_name
+    description: The name of the customer placing the order.
+  - name: customer_address
+    description: The address of the customer for order delivery.
+  - name: customer_phone
+    description: The contact phone number of the customer.
+  - name: account_balance
+    description: The current balance of the customer's account.
+  - name: market_segment
+    description: The market segment to which the customer belongs.
+  - name: customer_comment
+    description: Additional comments or notes related to the customer.
+  - name: nation_name
+    description: The name of the nation associated with the customer.
+  - name: region_key
+    description: A unique identifier for the region associated with the customer.
+  - name: nation_comment
+    description: Additional comments or notes related to the customer's nation.

@@ -1,0 +1,41 @@
+models:
+  - name: stg_TPCH__ORDERS
+    description: This model serves as a staging layer for orders data from the TPCH dataset. It standardizes and renames columns for downstream processing and analysis, ensuring consistency and clarity in the data pipeline.
+    columns:
+      - name: order_id
+        description: A unique identifier for each order.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: A unique identifier for the customer who placed the order.
+        tests:
+          - not_null
+      - name: order_status
+        description: The current status of the order, indicating its progress in the fulfillment process.
+        tests:
+          - not_null
+      - name: total_price
+        description: The total monetary value of the order.
+        tests:
+          - not_null
+      - name: order_date
+        description: The date on which the order was placed.
+        tests:
+          - not_null
+      - name: order_priority
+        description: The priority level assigned to the order, indicating its urgency.
+        tests:
+          - not_null
+      - name: clerk
+        description: The identifier of the clerk responsible for handling the order.
+        tests:
+          - not_null
+      - name: ship_priority
+        description: The priority level for shipping the order, affecting delivery speed.
+        tests:
+          - not_null
+      - name: comment
+        description: Additional notes or comments associated with the order.
+        tests:
+          - not_null
